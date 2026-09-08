@@ -4,6 +4,7 @@ it create the tables in the bronze layer for crm & erp, 3 tables each
 1) The code will check the whether table exists or not, if it exists then it will drop it
 2) it will create the table
 3) if object_id is present in user defined 
+
 */
 IF	OBJECT_ID ('bronze.crm_cust_info','U') IS NOT NULL
 	DROP TABLE bronze.crm_cust_info;
