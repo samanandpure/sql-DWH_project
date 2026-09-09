@@ -4,6 +4,7 @@ prior to inserting Checked the whether duplictes are there based on the primary 
 converted them into full like for gender if it M then male, for status if its s meanse single like wise
 using the Row_number window fnction inserted the records which are only having row_num 1 for cst_id
 
+
 after inserting the daa checked the same issues are persisting for silver table or not
 not seeing any issue
 */
