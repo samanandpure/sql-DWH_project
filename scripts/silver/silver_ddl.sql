@@ -42,14 +42,14 @@ CREATE TABLE silver.crm_sales_details (
 	sls_ord_num VARCHAR(50),
 	sls_prd_key VARCHAR(50),
 	sls_cust_id INT,
-	sls_order_dt int,
-	sls_ship_dt int,
-	sls_due_dt int,
+	sls_order_dt date,
+	sls_ship_dt date,
+	sls_due_dt date,
 	sls_sales FLOAT,
 	sls_quantity INT,
 	sls_price INT,
 	dwh_create_date datetime default getdate()
-);
+)
 
 
 IF OBJECT_ID('silver.erp_cust_az12','U') IS NOT NULL
