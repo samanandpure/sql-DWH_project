@@ -22,8 +22,10 @@ CREATE TABLE silver.crm_cust_info (
 
 IF OBJECT_ID('silver.crm_prd_info','U') is not null
 	DROP TABLE silver.crm_prd_info
+
 CREATE TABLE silver.crm_prd_info (
 	prd_id INT,
+	cat_id VARCHAR(50),
 	prd_key VARCHAR(50),
 	prd_nm VARCHAR(50),
 	prd_cost INT,
@@ -31,7 +33,7 @@ CREATE TABLE silver.crm_prd_info (
 	prd_start_dt DATETIME,
 	prd_end_dt DATETIME,
 	dwh_create_date datetime default getdate()
-);
+)
 
 IF OBJECT_ID('silver.crm_sales_details','U') IS NOT NULL
 	DROP TABLE silver.crm_sales_details;
