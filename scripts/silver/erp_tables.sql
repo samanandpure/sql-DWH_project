@@ -26,6 +26,9 @@ from
 
 
 /*
+In Table  bronze.erp_loc_a101
+The column CID was having '-' in between this column we have to connect with cst_key there '-' was no there so we removed that
+CNTRY column having some irreularaties so we replaced with proper values
 
 */
 
@@ -41,3 +44,10 @@ select
 		ELSE TRIM(CNTRY)
 	END AS CNTRY
 from bronze.erp_loc_a101;
+
+/*
+The data was clean in bronze.erp_px_cat_g1v2 the data does not needed to be cleaned so we loaded the data as it
+*/
+insert into silver.erp_px_cat_g1v2 (id,cat,subcat,maintenance)
+select id,cat,subcat,maintenance
+from  bronze.erp_px_cat_g1v2;
